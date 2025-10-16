@@ -93,7 +93,7 @@ Altair personal slc odbc connections to and from ms sql server with and without 
     libname db sqlserver
      server   = "localhost"
      user     = "sa"
-     password = "Sas2@rlx"
+     password = "xxxxxxx"
      database = 'db'
      dsn      = "sql17"
      ;
@@ -247,7 +247,7 @@ Altair personal slc odbc connections to and from ms sql server with and without 
     /*--- filter table inside sql server with sql server sql dialect ---*/
     /*--- output to a SLC wpd table                                  ---*/
     proc sql;
-      connect to sqlserver (dsn="sql17" database="db" user="sa" password="Sas2@rlx");
+      connect to sqlserver (dsn="sql17" database="db" user="sa" password="xxxxxxxx");
       create table tst as (
       select * from connection to sqlserver
         (select * from db.dbo.Orders where ShipVia=1));
